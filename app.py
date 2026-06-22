@@ -107,9 +107,6 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db = SQLAlchemy(app)
 
-with app.app_context():
-    db.create_all()
-
 # User Model
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -470,8 +467,10 @@ def logout():
 
     return redirect(url_for("home"))
 
+# Create tables
+with app.app_context():
+    db.create_all()
+
 # Run
 if __name__ == "__main__":
-    with app.app_context():
-    db.create_all()
     app.run(debug=True)
