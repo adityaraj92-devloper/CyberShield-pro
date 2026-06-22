@@ -1,0 +1,449 @@
+/* HERO SECTION */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#050816;
+    color:white;
+    min-height:100vh;
+    overflow-x:hidden;
+}
+
+/* Background */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:
+    radial-gradient(circle at top right,
+    rgba(0,255,136,.15),
+    transparent 40%),
+
+    radial-gradient(circle at bottom left,
+    rgba(0,229,255,.15),
+    transparent 40%);
+
+    z-index:-1;
+}
+
+/* Navbar */
+
+.navbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:25px 60px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.logo{
+
+    font-size:30px;
+
+    font-weight:700;
+
+    color:#00ff88;
+}
+
+.nav-links{
+
+    display:flex;
+
+    gap:15px;
+}
+
+.login-btn{
+
+    padding:12px 25px;
+
+    border:1px solid #00e5ff;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:#00e5ff;
+}
+
+.register-btn{
+
+    padding:12px 25px;
+
+    border-radius:50px;
+
+    background:#00ff88;
+
+    color:black;
+
+    text-decoration:none;
+
+    font-weight:bold;
+}
+
+/* Hero */
+
+.hero{
+
+    text-align:center;
+
+    padding:100px 20px 50px;
+}
+
+.hero h1{
+
+    font-size:72px;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+    color:white;
+}
+
+.hero p{
+
+    font-size:22px;
+
+    color:#9ca3af;
+}
+
+.scan-btn{
+
+    margin-top:35px;
+
+    padding:18px 50px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+    45deg,
+    #00ff88,
+    #00e5ff
+    );
+
+    color:black;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+/* Features */
+
+.features{
+
+    width:90%;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+    padding:50px 0;
+}
+
+.card{
+
+    background:#0f172a;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    text-align:center;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 0 20px rgba(0,255,136,.3);
+}
+
+.card h2{
+
+    color:#00ff88;
+
+    margin-bottom:15px;
+}
+
+/* Footer */
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    color:#94a3b8;
+}
+/* LOGIN REGISTER PREMIUM */
+
+.auth-page{
+    background:#030712;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.auth-box{
+
+    position:relative;
+    z-index:999;
+
+    width:500px;
+
+    background:#0f172a;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    border:2px solid #00ff88;
+
+    box-shadow:
+    0 0 30px rgba(0,255,136,.3);
+
+    text-align:center;
+}
+
+.auth-box h1{
+
+    color:#00ff88;
+
+    font-size:42px;
+
+    margin-bottom:10px;
+
+    font-weight:900;
+}
+
+.auth-box h2{
+
+    font-size:28px;
+
+    margin-bottom:25px;
+
+    color:white;
+}
+
+.auth-box input{
+
+    position:relative;
+    z-index:1000;
+
+    width:100%;
+
+    padding:15px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:#111827;
+
+    color:white;
+
+    font-size:16px;
+}
+
+.auth-box button{
+
+    width:100%;
+
+    margin-top:20px;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        45deg,
+        #00ff88,
+        #00e5ff
+    );
+
+    color:black;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+}
+
+.auth-box a{
+
+    display:block;
+
+    margin-top:20px;
+
+    color:#00e5ff;
+
+    text-decoration:none;
+}
+
+.credit{
+
+    margin-top:20px;
+
+    color:#94a3b8;
+
+    font-size:14px;
+}
+/* DASHBOARD */
+
+.dashboard-container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+    color:white;
+}
+
+.dashboard-container h1{
+
+    text-align:center;
+
+    color:#00ff88;
+
+    margin-bottom:30px;
+}
+
+.stats{
+
+    display:flex;
+
+    gap:20px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+}
+
+.stat-card{
+
+    width:250px;
+
+    background:#0f172a;
+
+    padding:25px;
+
+    border-radius:20px;
+
+    text-align:center;
+
+    border:1px solid #00ff88;
+}
+
+.stat-card h2{
+
+    color:#00ff88;
+
+    font-size:35px;
+}
+
+.scan-box{
+
+    background:#0f172a;
+
+    margin-top:40px;
+
+    padding:30px;
+
+    border-radius:20px;
+
+    text-align:center;
+}
+
+.scan-box input{
+
+    width:80%;
+
+    padding:15px;
+
+    margin-top:15px;
+
+    border:none;
+
+    border-radius:10px;
+}
+
+.scan-box button{
+
+    margin-top:20px;
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        45deg,
+        #00ff88,
+        #00e5ff
+    );
+
+    font-weight:bold;
+}
+
+.history-title{
+
+    margin-top:40px;
+
+    text-align:center;
+}
+
+.scan-history{
+    padding: 20px;
+}
+
+.scan-card{
+    background: rgba(255,255,255,0.05);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #00ff88;
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Dashboard - CyberShield Pro</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+<h1>
+🛡️ Welcome {{ username }}
+</h1>
+
+<div class="stats">
+
+<div class="stat-card">
+<h2>{{ scans|length }}</h2>
+<p>Total Scans</p>
+</div>
+
+<div class="stat-card">
+<h2>Free</h2>
+<p>Current Plan</p>
+</div>
+
+<div class="stat-card">
+<h2>Active</h2>
+<p>Account Status</p>
+</div>
+
+</div>
+
+<div class="scan-box">
+
+<h2>Scan Website</h2>
+
+<form action="/scan" method="POST">
+
+<input
+type="text"
+name="website"
+placeholder="Enter Website (example.com)"
+required>
+
+<button type="submit">
+🚀 Start Scan
+</button>
+
+</form>
+
+</div>
+
+<h2 class="history-title">
+Recent Scans
+</h2>
+
+<div class="scan-history">
+
+{% for scan in scans %}
+
+<div class="scan-card">
+
+<strong>{{ scan.website }}</strong><br>
+
+SSL: {{ scan.ssl_status }}<br>
+
+XSS: {{ scan.xss_status }}<br>
+
+SQLi: {{ scan.sqli_status }}<br>
+
+Risk Score: {{ scan.risk_score }}<br>
+
+Risk level: {{ scan.risk_level }}<br>
+
+Header Score: {{ scan.header_score }}<br>
+
+WHOIS: {{ scan.whois_info }}<br>
+
+Ports: {{ scan.open_ports }}<br>
+
+<b>Recommendations:</b><br>
+{{ scan.recommendations }}<br>
+
+Date: {{ scan.scan_date }}
+
+<br><br>
+
+<a href="/report/{{ scan.id }}">
+    📄 Download Report
+</a>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+</div>
+
+</body>
+</html>

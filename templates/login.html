@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Login - CyberShield Pro</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body class="auth-box">
+
+<div class="auth-box">
+
+    <h1>🛡️ CyberShield Pro</h1>
+
+    <h2>Welcome Back</h2>
+
+    <form method="POST">
+
+        <input
+        type="email"
+        name="email"
+        placeholder="Email Address"
+        required>
+
+        <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        required>
+
+        <button type="submit">
+            Login
+        </button>
+
+    </form>
+
+    <a href="/register">
+        Don't have an account?
+    </a>
+
+    <p class="credit">
+        Developed By Aditya Mishra
+    </p>
+
+</div>
+
+</body>
+</html>

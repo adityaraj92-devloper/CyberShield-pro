@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register - CyberShield Pro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="auth-page">
+
+<div class="auth-box">
+
+    <h1>🛡️ CyberShield Pro</h1>
+
+    <h2>Create Account</h2>
+
+    <form method="POST">
+
+        <input
+        type="text"
+        name="username"
+        placeholder="Username"
+        required>
+
+        <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        required>
+
+        <input
+        type="text"
+        name="phone"
+        placeholder="Phone Number"
+        required>
+
+        <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        required>
+
+        <input
+        type="password"
+        name="confirm_password"
+        placeholder="Confirm Password"
+        required>
+
+
+        <button type="submit">
+            Create Account
+        </button>
+
+    </form>
+
+    <a href="/login">
+        Already have account?
+    </a>
+
+    <p class="credit">
+        Developed By Aditya Mishra
+    </p>
+
+</div>
+
+</body>
+</html>
