@@ -265,13 +265,17 @@ def login():
 
             session["user"] = user.username
 
-            return redirect(
+            return redirect( 
                 url_for("dashboard")
             )
 
         return "Invalid Email or Password"
 
     return render_template("login.html")
+
+@app.route('/forgot-password')
+def forgot_password():
+    return render_template('forgot_password.html')
 
 @app.route("/scan", methods=["POST"])
 def scan():
