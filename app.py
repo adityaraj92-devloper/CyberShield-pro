@@ -275,6 +275,9 @@ def login():
 
 @app.route('/forgot-password')
 def forgot_password():
+    if request .method == 'POST' :
+        return "OTP Sent Successfully"
+        
     return render_template('forgot_password.html')
 
 @app.route("/scan", methods=["POST"])
