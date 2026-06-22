@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+Werkzeug
+requests
+python-whois
+reportlab
+gunicorn
